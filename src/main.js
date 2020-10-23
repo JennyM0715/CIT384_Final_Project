@@ -9,13 +9,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 //register BootstrapVue
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import { ModalPlugin } from 'bootstrap-vue'
+
 
 // Install BootstrapVue
 Vue.use(BootstrapVue)
 
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
-
+Vue.use(ModalPlugin)
 
 //Alternatively you can import Bootstrap and BootstrapVue scss files in a custom SCSS file:
 //import 'node_modules/bootstrap/scss/bootstrap';

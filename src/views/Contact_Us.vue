@@ -42,21 +42,45 @@
               
             </button>
             </router-link> 
-           <!--- <div>
-           <b-button v-b-modal.modal-1>Send Message</b-button>
-          <b-modal id="modal-1" title="BootstrapVue">
-              <p class="my-4">Your message has been sent and will be processed!</p>
-          </b-modal>
-            </div>-->
-            <button
+
+             <!--- <button
               id="sendbtn"
               type="submit"
               name="sendmsg-button"
               style="width: 150px"
               class="contactbtn"
             >Send Message
-            </button>
-           
+            </button>--->
+           <!---<b-button @click="$bvModal.show('modal-scoped')" variant="success">Send Message</b-button>
+              <b-modal id="modal-scoped">
+                <p>Your feedback has been received and will take 1-2 weeks for response.</p>
+                <template #modal-footer="{ ok }">--->
+                  <!-- Emulate built in modal footer ok and cancel button actions -->
+               <!-- <b-button size="sm" variant="primary" @click="ok()>OK</b-button>
+                </template>
+              </b-modal>--->
+            <a data-toggle="modal" href="#myModal" class="btn btn-primary" style="background-color:green">Send Message</a>
+            
+              <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Feedback recieved</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                  
+                </div>
+              <div class="modal-body">
+                Your feedback has been recieved and will take 1-2 weeks response.
+              </div>
+              
+              <div class="modal-footer">
+                
+               <a color="green" class="btn btn-primary" @click="$bvModal.hide('modal')">OK </a>
+              </div>
+          </div>
+        </div>
+    </div>
+ 
           </div>
         </form>
       </div>
@@ -66,7 +90,7 @@
 
 
 <style>
-      
+    
       /* Extra styles for the cancel button */
       #cbtn {
         padding: 14px 20px;
