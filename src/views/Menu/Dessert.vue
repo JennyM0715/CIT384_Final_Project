@@ -32,7 +32,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Dessert/molten-choco-cake.jpg"
-          img-alt="Image"
+          img-alt="Molten Chocolate Cake"
           img-top
         >
         <b-card-body>
@@ -50,7 +50,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Dessert/chocolate-peanut-butter-cup-ice-cream-3-550.jpg"
-          img-alt="Image"
+          img-alt="Ice cream"
           img-top
         >
         <b-card-body>
@@ -75,7 +75,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Dessert/flan.jpg"
-          img-alt="Image"
+          img-alt="Flan"
           img-top
         >
         <b-card-body id="flan-card"> 
@@ -92,7 +92,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Dessert/Tres-Leches-Cake-Recipe-6.jpg"
-          img-alt="Image"
+          img-alt="Tres leches cake"
           img-top
         >
         <b-card-body>
@@ -110,7 +110,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Dessert/Churros_9-SQ.jpg"
-          img-alt="Image"
+          img-alt="Churros"
           img-top
         >
         <b-card-body>
@@ -135,8 +135,3 @@
   </main>
 </template>
 
-<style>
-#flan-card{
-  height: 20px;
-}
-</style>

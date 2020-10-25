@@ -18,7 +18,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Lunch/carne-asada-tacos.jpg"
-          img-alt="Image"
+          img-alt="Carne Asada Taco"
           img-top
         >
         <b-card-body>
@@ -33,7 +33,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Lunch/sopes-2-500x500.jpg"
-          img-alt="Image"
+          img-alt="Sopes"
           img-top
         >
         <b-card-body>
@@ -49,7 +49,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Lunch/carne-asada-fries.jpg"
-          img-alt="Image"
+          img-alt="Carne Asada Fries"
           img-top
         >
         <b-card-body>
@@ -72,7 +72,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Lunch/enchiladas-rancheras.jpg"
-          img-alt="Image"
+          img-alt="Enchiladas Rancheras"
           img-top
         >
         <b-card-body>
@@ -87,7 +87,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Lunch/CARNE-ASADA-AND-CHEESE-ENCHILADA.jpg"
-          img-alt="Image"
+          img-alt="Carne Asada & Cheese Enchilada"
           img-top
         >
         <b-card-body>
@@ -102,7 +102,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Lunch/steak-molcajete.jpg"
-          img-alt="Image"
+          img-alt="Steak Molcajete"
           img-top
         >
         <b-card-body>

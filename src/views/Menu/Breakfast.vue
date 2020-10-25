@@ -18,7 +18,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Breakfast/Huevos-rancheros.jpg"
-          img-alt="Image"
+          img-alt="Huevos rancheros"
           img-top
         >
         <b-card-body>
@@ -34,7 +34,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Breakfast/chilaquiles.jpg"
-          img-alt="Image"
+          img-alt="Chilaquiles"
           img-top
         >
         <b-card-body>
@@ -52,7 +52,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Breakfast/machaca and eggs.jpg"
-          img-alt="Image"
+          img-alt="Machaca and Eggs Plate"
           img-top
         >
         <b-card-body>
@@ -75,7 +75,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Breakfast/Breakfast-Burritos-10.jpg"
-          img-alt="Image"
+          img-alt="Breakfast Burrito"
           img-top
         >
         <b-card-body>
@@ -90,7 +90,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Breakfast/chile-rellenos.jpg"
-          img-alt="Image"
+          img-alt="Chile relleno"
           img-top
         >
         <b-card-body>
@@ -106,7 +106,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Breakfast/Chorizo-Burrito.jpg"
-          img-alt="Image"
+          img-alt="Chorizo Burrito"
           img-top
         >
         <b-card-body>

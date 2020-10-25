@@ -16,7 +16,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Appetizers/rey de nachos.jpg"
-          img-alt="Image"
+          img-alt="Rey de nachos"
           img-top
         >
         <b-card-body>
@@ -31,7 +31,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Appetizers/shrimp-cocktail-4.jpg"
-          img-alt="Image"
+          img-alt="Shrimp Cocktail Gigante"
           img-top
         >
         <b-card-body>
@@ -45,7 +45,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Appetizers/Guacamole-chips.jpg"
-          img-alt="Image"
+          img-alt="Guacamole & Corn Tortilla Chips"
           img-top
         >
         <b-card-body>
@@ -67,7 +67,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Appetizers/chicken-strips.jpg"
-          img-alt="Image"
+          img-alt="Chicken Tenders"
           img-top
         >
         <b-card-body>
@@ -84,7 +84,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Appetizers/Baked Spinach & Artichoke Dip.jpg"
-          img-alt="Image"
+          img-alt="Baked Spinach & Artichoke Dip"
           img-top
         >
         <b-card-body>
@@ -100,7 +100,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Appetizers/cheese-quesadillas.jpg"
-          img-alt="Image"
+          img-alt="Cheese Quesadilla"
           img-top
         >
         <b-card-body>
@@ -128,7 +128,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Appetizers/mexican-caesar-salad.jpg"
-          img-alt="Image"
+          img-alt="Mexican Caesar Grilled Chicken"
           img-top
         >
         <b-card-body>
@@ -144,7 +144,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Appetizers/caesar-salad-plate.jpg"
-          img-alt="Image"
+          img-alt="Caesar Salad"
           img-top
         >
         <b-card-body>
@@ -159,7 +159,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Appetizers/santa-fe-chicken-salad.jpg"
-          img-alt="Image"
+          img-alt="Santa Fe Chicken Salad"
           img-top
         >
         <b-card-body>
@@ -186,7 +186,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Appetizers/Menudo.jpg"
-          img-alt="Image"
+          img-alt="Menudo"
           img-top
         >
         <b-card-body>
@@ -202,7 +202,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Appetizers/pozole.jpg"
-          img-alt="Image"
+          img-alt="Pozole"
           img-top
         >
         <b-card-body>
@@ -217,7 +217,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Appetizers/loaded-baked-potato-soup.jpg"
-          img-alt="Image"
+          img-alt="Loaded Potato Soup"
           img-top
         >
         <b-card-body>
@@ -239,7 +239,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Appetizers/Chicken-Rice-Soup.jpg"
-          img-alt="Image"
+          img-alt="Chicken Soup"
           img-top
         >
         <b-card-body>
@@ -254,7 +254,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Appetizers/vegetable-beef-soup.jpg"
-          img-alt="Image"
+          img-alt="Beef Soup"
           img-top
         >
         <b-card-body>
@@ -270,7 +270,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Appetizers/chicken-tortilla-soup.jpg"
-          img-alt="Image"
+          img-alt="Chicken Tortilla Soup"
           img-top
         >
         <b-card-body>

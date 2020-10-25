@@ -18,7 +18,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Dinner/Skillet-Shrimp-Fajitas-Photo.jpg"
-          img-alt="Image"
+          img-alt="Shrimp Fajitas"
           img-top
         >
         <b-card-body>
@@ -34,7 +34,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Dinner/torta.jpg"
-          img-alt="Image"
+          img-alt="Torta"
           img-top
         >
         <b-card-body>
@@ -50,7 +50,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Dinner/tosdada-de-ceviche.jpg"
-          img-alt="Image"
+          img-alt="Tostadas de ceviche"
           img-top
         >
         <b-card-body>
@@ -73,7 +73,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Dinner/huaraches-700x525.jpg"
-          img-alt="Image"
+          img-alt="Huarache"
           img-top
         >
         <b-card-body>
@@ -90,7 +90,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Dinner/chile-relleno-burrito.jpg"
-          img-alt="Image"
+          img-alt="Chile Relleno Burrito"
           img-top
         >
         <b-card-body>
@@ -106,7 +106,7 @@
           no-body
           style="max-width: 40rem;"
           img-src="../../assets/Dinner/taquitos-dorados.jpg"
-          img-alt="Image"
+          img-alt="Taquitos Dorados"
           img-top
         >
         <b-card-body>

@@ -1,4 +1,5 @@
 <template>
+
   <div class="contact_us">
     <!----<h1>This is an contact us page</h1>--->
     <main role="main">
@@ -7,11 +8,12 @@
         <p>Please fill in this form to send your feedback!</p>
        <!---- <form class="form-contact" method="POST" action="contact_form.php">-->
          <!--<form class="form-contact" method="POST" action="https://formspree.io/email@domain.tld">-->
-        <form class="form-contact" action="#">
+        <form class="form-contact" id="contact-form" action="#">
           <input
             type="text"
             name="fullname"
             placeholder="Enter Full Name"
+            id=fn
             required
           />
 
@@ -19,6 +21,7 @@
             type="email"
             name="mailaddr"
             placeholder="Your Email Address"
+            id="em"
             required
           />
           <input type="text" name="subject" placeholder="Subject" />
@@ -51,15 +54,7 @@
               class="contactbtn"
             >Send Message
             </button>--->
-           <!---<b-button @click="$bvModal.show('modal-scoped')" variant="success">Send Message</b-button>
-              <b-modal id="modal-scoped">
-                <p>Your feedback has been received and will take 1-2 weeks for response.</p>
-                <template #modal-footer="{ ok }">-->
-                  <!-- Emulate built in modal footer ok and cancel button actions -->
-               <!-- <b-button size="sm" variant="primary" @click="ok()>OK</b-button>
-                </template>
-              </b-modal>--->
-            <a data-toggle="modal" href="#myModal"  id="sendbtn" class="contactbtn" style="background-color:green">Send Message</a>
+            <a data-toggle="modal" type="button" href="#myModal"  id="sendbtn" class="contactbtn" style="background-color:green">Send Message</a>
               <div class="modal fade" id="myModal">
                 <div class="modal-dialog">
                 <div class="modal-content">
@@ -72,6 +67,12 @@
               </div>
               <div class="modal-footer">
                <!--<a color="green" class="btn btn-primary" @click="$bvModal.hide('modal')">OK </a>-->
+
+
+
+               <!---data-dismiss="modal" is a custom data property for bootstrap-vue that will close the modal-->
+               <!---@click="$router.push({ path: '/' }) means that that button element is binded to a click event and when 
+               it's clicked it will use vue-router to go to that route / which is currently the home page.--->
                <button color="green" class="btn btn-primary" data-dismiss="modal" aria-hidden="true" @click="$router.push({ path: '/' })">OK</button>
                </div>
                </div>
@@ -84,6 +85,7 @@
     </main>
   </div>
 </template>
+
 
 
 <style>
