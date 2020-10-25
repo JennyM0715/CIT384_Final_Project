@@ -78,7 +78,7 @@
           img-alt="Image"
           img-top
         >
-        <b-card-body>
+        <b-card-body id="flan-card"> 
           <b-card-title id="title"><b>Flan</b></b-card-title>
           <b-card-sub-title class="mb-2" id="price">$5.25</b-card-sub-title>
           <b-card-text>
@@ -134,3 +134,9 @@
   </div>
   </main>
 </template>
+
+<style>
+#flan-card{
+  height: 20px;
+}
+</style>

@@ -130,7 +130,6 @@
         margin: 8px 0;
         border: none;
         cursor: pointer;
-       
         opacity: 0.9;
         border-radius: 4px;
         cursor: pointer;

@@ -18,7 +18,7 @@
           img-alt="Image"
           img-top
         >
-        <b-card-body>
+        <b-card-body id="soda-card">
           <b-card-title id="title"><b>Soda</b></b-card-title>
           <b-card-sub-title class="mb-2" id="price">$2.50</b-card-sub-title>
           <b-card-text> Choices: Pepsi, Coca-cola, Diet Coca-cola, Sprite, Mountain
@@ -289,7 +289,7 @@
           img-top
            id="image-card"
         >
-        <b-card-body>
+        <b-card-body id="michael-pozzan-merlot-card">
           <b-card-title id="title"><b>Michael Pozzan Merlot</b></b-card-title>
           <b-card-sub-title class="mb-2" id="price">$27.85</b-card-sub-title>
           <b-card-text>Napa County, California. Dark raspberry aromas on the nose followed by a firm tannic 
@@ -363,12 +363,11 @@
           img-top
            id="image-card"
         >
-        <b-card-body>
+        <b-card-body id="bogle-vineyard-zinfandel-card">
           <b-card-title id="title"><b>Bogle Vineyard Zinfandel</b></b-card-title>
           <b-card-sub-title class="mb-2" id="price">$13.45</b-card-sub-title>
            <b-card-text>Bogle Vineyards, California. Jammy with sturdy structure saturated
-                with dark fruit with hints of lavender & savory herbs. Spicy juniper finish tempered by
-                 aging in two-year old American oak.</b-card-text>
+                with dark fruit with hints of lavender & savory herbs.</b-card-text>
         </b-card-body>
         </b-card>
        <!--------Monte Antico Rosso -------------->
@@ -410,7 +409,7 @@
           img-top
            id="image-card"
         >
-        <b-card-body>
+        <b-card-body id="kendall-jackson-chardonnay-vintners-reserve-card">
           <b-card-title id="title"><b>Kendall-Jackson Chardonnay Vintner's Reserve</b></b-card-title>
           <b-card-sub-title class="mb-2" id="price">$13.65</b-card-sub-title>
           <b-card-text>Kendall-Jackson Winery, California. Fruity, smooth and slightly spicy, this 
@@ -445,7 +444,7 @@
           img-top
            id="image-card"
         >
-        <b-card-body>
+        <b-card-body id="cantina-di-casteggio-moscato-card">
           <b-card-title id="title"><b>Cantina di Casteggio Moscato </b></b-card-title>
           <b-card-sub-title class="mb-2" id="price">$18.14</b-card-sub-title>
           <b-card-text>Lombardy, Italy. Aromatic and delicate the delightful 
@@ -487,12 +486,12 @@
           img-top
            id="image-card"
         >
-        <b-card-body>
+        <b-card-body id="maddalena-vineyards-riesling-card">
           <b-card-title id="title"><b>Maddalena Vineyards Riesling</b></b-card-title>
           <b-card-sub-title class="mb-2" id="price">$15.05</b-card-sub-title>
-           <b-card-text>Monterey County, California. Aromas of apricot, honey, and wildflowers. 
-               The rich mouth greets the palate with fresh fruit flavors of pear and green 
-               apple. This elegant wine balances natural acidity and sweetness.</b-card-text>
+           <b-card-text>Monterey County, California. 
+               It greets the palate with fresh fruit flavors of pear & green 
+               apple. It balances natural acidity and sweetness.</b-card-text>
         </b-card-body>
         </b-card>
        <!--------Henderson Trail Pinot Gris-------------->
@@ -528,3 +527,25 @@
   </div>
 </main>
 </template>
+
+<style>
+#soda-card{
+  height: 50px;
+}
+
+#michael-pozzan-merlot-card{
+  height: 220px;
+}
+
+#bogle-vineyard-zinfandel-card{
+  height: 195px;
+}
+
+#maddalena-vineyards-riesling-card{
+  height: 195px;
+}
+
+#kendall-jackson-chardonnay-vintners-reserve-card, #cantina-di-casteggio-moscato-card{
+  height: 270px;
+}
+</style>

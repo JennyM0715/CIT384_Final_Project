@@ -20,5 +20,6 @@ module.exports = {
   
           return options
         })
-    }
+    },
+    publicPath: '/CIT384_Final_Project-PUBLIC/'
   }
