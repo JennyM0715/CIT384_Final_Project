@@ -64,7 +64,7 @@
   
 }
 #nav {
-  
+   font-family: "Times New Roman", "Amatic SC", sans-serif;
   font-size: 25px;
 }
 /*

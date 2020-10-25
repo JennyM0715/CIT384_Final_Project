@@ -26,17 +26,18 @@ body {
 .navbar * {
   font-size: 1.6rem;
 }
-/*.show{
-  position: absolute;
-  top: 0;
-  left: 0;
-}*/
+.btn-primary {
+  width: 50px;
+  height: 40px;
+  font-size: 15px;
+}
 /****************************************/
 /*          INDEX.HTML EDITING           */
 /******************************************/
 /*START OF HOME PAGE EDITING (index.html)*/
 div.Summary_transbox {
   margin: 30px;
+  font-family: "Times New Roman", "Amatic SC", sans-serif;
   background-color: white;
   border: 1px solid black;
   width: auto;
@@ -61,13 +62,15 @@ div.Summary_transbox p {
   font-weight: normal;
   color: black;
   text-indent: 5%;
-  margin-right: 5%;
-  margin-left: 5%;
+  margin-right: 8%;
+  margin-left: 0%;
+  margin-bottom: 8%;
 }
 /*end OF HOME PAGE EDITING (index.html)*/
 /*Start of Hours of Operation editing in index.html */
 div.Hours_of_Operations_transbox {
   margin: 30px;
+  font-family: "Times New Roman", "Amatic SC", sans-serif;
   background-color: white;
   border: 1px solid black;
   opacity: 0.7;
@@ -194,6 +197,7 @@ input[type="submit"]:hover {
 
 .Contact_container {
   border-radius: 5px;
+  font-family: "Times New Roman", "Amatic SC", sans-serif;
   background-color: #f2f2f2;
   padding: 40px;
   height: 600px;
@@ -258,6 +262,7 @@ input[type="submit"]:hover {
 
 .SignUp_container {
   border-radius: 5px;
+  font-family: "Times New Roman", "Amatic SC", sans-serif;
   background-color: #f2f2f2;
   padding: 40px;
   height: 450px;

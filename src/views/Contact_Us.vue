@@ -54,32 +54,29 @@
            <!---<b-button @click="$bvModal.show('modal-scoped')" variant="success">Send Message</b-button>
               <b-modal id="modal-scoped">
                 <p>Your feedback has been received and will take 1-2 weeks for response.</p>
-                <template #modal-footer="{ ok }">--->
+                <template #modal-footer="{ ok }">-->
                   <!-- Emulate built in modal footer ok and cancel button actions -->
                <!-- <b-button size="sm" variant="primary" @click="ok()>OK</b-button>
                 </template>
               </b-modal>--->
-            <a data-toggle="modal" href="#myModal" class="btn btn-primary" style="background-color:green">Send Message</a>
-            
+            <a data-toggle="modal" href="#myModal"  id="sendbtn" class="contactbtn" style="background-color:green">Send Message</a>
               <div class="modal fade" id="myModal">
                 <div class="modal-dialog">
                 <div class="modal-content">
                 <div class="modal-header">
                   <h4 class="modal-title">Feedback recieved</h4>
-                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-                  
+               <!---<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>---->
                 </div>
               <div class="modal-body">
                 Your feedback has been recieved and will take 1-2 weeks response.
               </div>
-              
               <div class="modal-footer">
-                
-               <a color="green" class="btn btn-primary" @click="$bvModal.hide('modal')">OK </a>
-              </div>
-          </div>
-        </div>
-    </div>
+               <!--<a color="green" class="btn btn-primary" @click="$bvModal.hide('modal')">OK </a>-->
+               <button color="green" class="btn btn-primary" data-dismiss="modal" aria-hidden="true" @click="$router.push({ path: '/' })">OK</button>
+               </div>
+               </div>
+               </div>
+             </div>
  
           </div>
         </form>
@@ -104,11 +101,14 @@
       }
 
       /* Float cancel and signup buttons and add an equal width*/
-      .cancelbtn,
-      .contactbtn {
+      .cancelbtn {
         float: inline-start;
         width: 20%;
       }
+      /*#sendbtn_contact{
+        width: 150px;
+        height: 50px;
+      }*/
       input[type="submit"] {
         background-color: #4caf50;
         color: white;
@@ -130,11 +130,13 @@
         margin: 8px 0;
         border: none;
         cursor: pointer;
-        width: 20%;
+       
         opacity: 0.9;
         border-radius: 4px;
         cursor: pointer;
         float: right;
+        width: 150px;
+        height: 50px;
       }
 
       #cbtn:hover,

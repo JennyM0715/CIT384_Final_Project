@@ -21,7 +21,7 @@
           <input
             type="email"
             name="mailaddr"
-            placeholder="Your email address"
+            placeholder="Your Email Address"
             required
           />
           
@@ -37,7 +37,7 @@
               Cancel
             </button>
              </router-link> 
-            <button
+            <!---<button
               id="signupbtn"
               type="submit"
               name="sendmsg-button"
@@ -45,7 +45,25 @@
               class="signbtn"
             >
               Sign Up
-            </button>
+            </button>----->
+            <a data-toggle="modal" href="#myModal" id="signupbtn" class="btn btn-primary" style="background-color:green">Sign Up</a>
+              <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">Sign up form has been recieved</h4>
+                  <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>-->
+                </div>
+              <div class="modal-body">
+                Thank you for signing up! Please check email for our special offers!
+              </div>
+              <div class="modal-footer">
+               <!--<a color="green" class="btn btn-primary" @click="$bvModal.hide('modal')">OK </a>-->
+               <button color="green" class="btn btn-primary" data-dismiss="modal" aria-hidden="true" @click="$router.push({ path: '/' })">OK</button>
+               </div>
+               </div>
+               </div>
+             </div>
           </div>
         </form>
       </div>
@@ -159,11 +177,15 @@ input[type="submit"]:hover {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 20%;
+  
   opacity: 0.9;
   border-radius: 4px;
   cursor: pointer;
   float: right;
+  width: 150px;
+  height: 50px;
+  margin-top: 5%;
+  font-size: 15px;
 }
 
 #canlbtn:hover,
