@@ -1,9 +1,9 @@
 #set up node enviro
-language: node_js
+#language: node_js
 
 #lts represents long-term support (stable release of node js)
-node_js:
-  - lts/*
+#node_js:
+ # - lts/*
 
 #after node enviro:
 #remove by force .git inside the CIT384_Final_Project/ repo
@@ -16,14 +16,32 @@ node_js:
 #stage changs that will be made
 #commit -m "message" [of stage changes]
 #push to declared branch on travs CI
-after_success:
-  - rm -rf .git
-  - npm run build
-  - git clone https://github.com/JennyM0715/CIT384_Final_Project-PUBLIC.git
-  - mv CIT384_Final_Project-PUBLIC/.git dist/
-  - cd dist
-  - git remote rm origin
-  - git remote add origin https://github.com/JennyM0715/CIT384_Final_Project-PUBLIC
-  - git add .
-  - git commit -m "Completed Travis-CI automated build"
-  - git push -fq origin ${GIT_BRANCH}
+#after_success:
+ # - rm -rf .git
+  #- npm run build
+  #- git clone https://github.com/JennyM0715/CIT384_Final_Project-PUBLIC.git
+  #- mv CIT384_Final_Project-PUBLIC/.git dist/
+  #- cd dist
+  #- git remote rm origin
+  #- git remote add origin https://github.com/JennyM0715/CIT384_Final_Project-PUBLIC
+  #- git add .
+  #- git commit -m "Completed Travis-CI automated build"
+  #- git push -fq origin ${GIT_BRANCH}
+
+
+language: node_js
+
+node_js:
+ - "node"
+
+cache: npm
+
+script: npm run build
+
+deploy:
+ provider: pages
+ skip_cleanup: true
+ github_token: $GITHUB_TOKEN
+ local_dir: dist
+ on:
+   branch: main
