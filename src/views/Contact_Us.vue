@@ -24,7 +24,7 @@
             id="em"
             required
           />
-          <input type="text" name="subject" placeholder="Subject" />
+          <input type="text" name="subject" placeholder="Subject" required />
           <textarea
             name="message"
             cols="5"
@@ -54,7 +54,7 @@
               class="contactbtn"
             >Send Message
             </button>--->
-            <a data-toggle="modal" type="button" href="#myModal"  id="sendbtn" class="contactbtn" style="background-color:green">Send Message</a>
+            <a data-toggle="modal" type="submit" href="#myModal"  id="sendbtn" class="contactbtn" style="background-color:green">Send Message</a>
               <div class="modal fade" id="myModal">
                 <div class="modal-dialog">
                 <div class="modal-content">
@@ -73,7 +73,7 @@
                <!---data-dismiss="modal" is a custom data property for bootstrap-vue that will close the modal-->
                <!---@click="$router.push({ path: '/' }) means that that button element is binded to a click event and when 
                it's clicked it will use vue-router to go to that route / which is currently the home page.--->
-               <button color="green" class="btn btn-primary" data-dismiss="modal" aria-hidden="true" @click="$router.push({ path: '/' })">OK</button>
+               <button  color="green" class="btn btn-primary" data-dismiss="modal" aria-hidden="true" @click="checkSubmission">OK</button>
                </div>
                </div>
                </div>
@@ -86,6 +86,17 @@
   </div>
 </template>
 
+<script>
+
+export default {
+ checkSubmission: function () {
+        console.log(document.querySelectorAll('[required]'))
+       
+        //$router.push({ path: '/' }) // check if fields required
+     }
+
+}
+</script>
 
 
 <style>
