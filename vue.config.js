@@ -26,3 +26,4 @@ module.exports = {
       ? '/CIT384_Final_Project-PUBLIC/'
       : '/'
   }
+  //one small step for mankind
