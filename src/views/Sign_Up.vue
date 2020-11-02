@@ -7,18 +7,21 @@
         <p>Please fill in this form to recieve promotional offers, discounts, notices on special events, and so much more!</p>
         <form class="form-signup" action="#">
           <input
+           @change="checkValidation()"
             type="text"
             name="fname"
             placeholder="Enter First Name"
             required
           />
           <input
+           @change="checkValidation()"
           type="text"
           name="lname"
           placeholder="Enter Last Name"
           required
         />
           <input
+           @change="checkValidation()"
             type="email"
             name="mailaddr"
             placeholder="Your Email Address"
@@ -46,7 +49,7 @@
             >
               Sign Up
             </button>----->
-            <a data-toggle="modal" href="#myModal" id="signupbtn" class="btn btn-primary" style="background-color:green">Sign Up</a>
+            <a data-toggle="modal" href="#myModal" v-if="isConfirmAvailable" id="signupbtn" class="btn btn-primary" style="background-color:green">Sign Up</a>
               <div class="modal fade" id="myModal">
                 <div class="modal-dialog">
                 <div class="modal-content">
@@ -70,6 +73,38 @@
     </main>
   </div>
 </template>
+
+<script>
+
+export default {
+  data () {
+      return {
+        isConfirmAvailable: false
+      }
+  },
+
+  methods: {
+    checkValidation () {
+      const requiredFields = document.querySelectorAll('[required]')
+
+      for (let i = 0; i < requiredFields.length; i += 1) {
+        let isFieldBlank = (requiredFields[i].value === '')
+
+        if (isFieldBlank) {
+          this.isConfirmAvailable = false
+          break
+        } else {
+          this.isConfirmAvailable = true
+        }
+      }
+    }
+  }
+}
+
+</script>
+
+
+
 
 <style>
 /****************************************/
