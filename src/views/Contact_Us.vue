@@ -36,7 +36,7 @@
             required
           ></textarea>
           <div class="clearfix">
-           <router-link to="/">
+            <router-link to="/">
             <button
               id="cbtn"
               type="cancel"
@@ -44,12 +44,12 @@
               
               class="cancelbtn"
             >
-           Cancel
+            Cancel
               
             </button>
             </router-link> 
 
-             <!--- <button
+            <!--- <button
               id="sendbtn"
               type="submit"
               name="sendmsg-button"
@@ -171,11 +171,26 @@ export default {
         height: 50px;
       }
 
-      #cbtn:hover,
-      #sendbtn:hover {
-        opacity: 1;
-      }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    /* Set a style for all buttons */
+    #sendbtn {
+      background-color: #4caf50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 20%;
+      opacity: 0.9;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
 
-    </style>
-
-   
+    #cbtn:hover,
+    #sendbtn:hover {
+      opacity: 1;
+    }
+  </style>
