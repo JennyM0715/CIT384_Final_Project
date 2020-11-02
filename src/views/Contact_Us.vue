@@ -167,7 +167,7 @@ export default {
         border-radius: 4px;
         cursor: pointer;
         float: right;
-        width: 150px;
+        width: 200px;
         height: 50px;
       }
 
