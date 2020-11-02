@@ -8,7 +8,7 @@
         <p>Please fill in this form to send your feedback!</p>
        <!---- <form class="form-contact" method="POST" action="contact_form.php">-->
          <!--<form class="form-contact" method="POST" action="https://formspree.io/email@domain.tld">-->
-        <form class="form-contact" id="contact-form" action="#" name="myForm" onsubmit ="return validate()">
+        <form class="form-contact" id="contact-form" action="#" name="myForm" >
           <input
           @change="checkValidation()"
             type="text"
