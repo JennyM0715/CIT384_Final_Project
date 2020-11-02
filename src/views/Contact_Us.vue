@@ -57,7 +57,7 @@
               class="contactbtn"
             >Send Message
             </button>--->
-            <a  type="submit" href="#myModal" v-if="isConfirmAvailable" id="sendbtn" class="contactbtn" style="background-color:green" >Send Message</a>
+            <a data-toggle="modal" type="submit" href="#myModal" v-if="isConfirmAvailable" id="sendbtn" class="contactbtn" style="background-color:green" >Send Message</a>
               <div class="modal fade" id="myModal">
                 <div class="modal-dialog">
                 <div class="modal-content">
