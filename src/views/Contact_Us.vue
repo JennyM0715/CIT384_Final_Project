@@ -156,20 +156,7 @@ export default {
         background-color: #45a049;
       }
       /* Set a style for all buttons */
-      #sendbtn {
-        background-color: #4caf50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        cursor: pointer;
-        opacity: 0.9;
-        border-radius: 4px;
-        cursor: pointer;
-        float: right;
-        width: 200px;
-        height: 50px;
-      }
+    
 
     input[type="submit"]:hover {
       background-color: #45a049;
@@ -187,6 +174,7 @@ export default {
       border-radius: 4px;
       cursor: pointer;
       float: right;
+      width: 150px;
     }
 
     #cbtn:hover,
