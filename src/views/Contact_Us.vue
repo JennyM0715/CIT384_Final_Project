@@ -76,7 +76,7 @@
                <!---data-dismiss="modal" is a custom data property for bootstrap-vue that will close the modal-->
                <!---@click="$router.push({ path: '/' }) means that that button element is binded to a click event and when 
                it's clicked it will use vue-router to go to that route / which is currently the home page.--->
-               <button data-toggle="modal" color="green" class="btn btn-primary" @click="$router.push({ path: '/' }) data-dismiss="modal" aria-hidden="true" >OK</button>
+               <button data-toggle="modal" color="green" class="btn btn-primary" @click="$router.push({ path: '/' })" data-dismiss="modal" aria-hidden="true" >OK</button>
                </div>
                </div>
                </div>
@@ -114,56 +114,7 @@ export default {
       }
     }
   }
-
-
 }
- //checkSubmission: function () {
-  //      console.log(document.querySelectorAll('[required]'))
-       
-        //$router.push({ path: '/' }) // check if fields required
-  //   }
-  // Form validation code will come here.
-     /// validate: function () {
-      
-    //      var fullname=  document.forms["myForm"]["fullname"]; 
-    //       var mailaddr=  document.forms["myForm"]["mailaddr"]; 
-    //       var subject=  document.forms["myForm"]["subject"]; 
-    //       var message=   document.forms["myForm"]["message"]; 
-          
-    //       if (fullname.value == "") {  
-    //         window.alert("Please enter your full name."); 
-    //         fullname.focus(); 
-    //          return false; 
-    //       } 
-  
-     //      if (mailaddr.value == "") { 
-     //        window.alert("Please enter a valid email address."); 
-    //         mailaddr.focus(); 
-    //         return false; 
-        //   } 
-
-     //      if (subject.value == "") { 
-     //        window.alert("Please enter a subject/reason for contacting us."); 
-        //     subject.focus(); 
-         //    return false; 
-         //  } 
-  
-          // if (message.value == "") { 
-            //  window.alert( "Please enter your message in the box."); 
-             // message.focus(); 
-            // return false; 
-         //  } 
-          // return true; 
-    //   } 
- //  }
-  //validateForm: function () {
-  //var x = document.forms["myForm"]["fullname"].value;
- // if (x == "") {
-  //  alert("Name must be filled out");
-  //  return false;
- // }
-//}
-
 
 </script>
 
