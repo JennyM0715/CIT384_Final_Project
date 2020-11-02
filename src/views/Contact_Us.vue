@@ -76,7 +76,7 @@
                <!---data-dismiss="modal" is a custom data property for bootstrap-vue that will close the modal-->
                <!---@click="$router.push({ path: '/' }) means that that button element is binded to a click event and when 
                it's clicked it will use vue-router to go to that route / which is currently the home page.--->
-               <button data-toggle="modal" color="green" class="btn btn-primary" data-dismiss="modal" aria-hidden="true" >OK</button>
+               <button data-toggle="modal" color="green" class="btn btn-primary" @click="$router.push({ path: '/' }) data-dismiss="modal" aria-hidden="true" >OK</button>
                </div>
                </div>
                </div>
