@@ -1,184 +1,186 @@
 <template>
-
   <div class="contact_us">
-    <!----<h1>This is an contact us page</h1>--->
-    <main role="main">
-      <div class="Contact_container">
-        <h1>Contact Us!</h1>
-        <p>Please fill in this form to send your feedback!</p>
-       <!---- <form class="form-contact" method="POST" action="contact_form.php">-->
-         <!--<form class="form-contact" method="POST" action="https://formspree.io/email@domain.tld">-->
-        <form class="form-contact" id="contact-form" action="#" name="myForm" >
-          <input
-          @change="checkValidation()"
-            type="text"
-            name="fullname"
-            placeholder="Enter Full Name"
-            id=fn
-            required
-          />
+      <!----<h1>This is an contact us page</h1>--->
+      <main role="main">
+        <div class="Contact_container">
+          <h1>Contact Us!</h1>
+          <p>Please fill in this form to send your feedback!</p>
+          <div>
+            <validation-observer ref="observer" v-slot="{ handleSubmit }">
+              <b-form @submit.stop.prevent="handleSubmit(onSubmit)">
+                <validation-provider
+                  name="fullname"
+                  :rules="{ required: true, min: 3 }"
+                  v-slot="validationContext"
+                >
+                  <b-form-group id="fullname-input-group-1" label="Full Name" label-for="fullname-input-1">
+                    <b-form-input
+                      id="fullname"
+                      name="fullname"
+                      v-model="form.fullname"
+                      :state="getValidationState(validationContext)"
+                      aria-describedby="fullname-1-live-feedback"
+                      placeholder="Enter Full Name"
+                    ></b-form-input>
+                    <b-form-invalid-feedback id="fullname-1-live-feedback">{{ validationContext.errors[0] }}</b-form-invalid-feedback>
+                  </b-form-group>
+                </validation-provider>
+            
+            <validation-provider
+                  name="mailaddr"
+                  :rules="{ required: true, min: 3 }"
+                  v-slot="validationContext"
+                >
+                  <b-form-group id="mailaddr-input-group-2" label="Email Address" label-for="mailaddr-input-2">
+                    <b-form-input
+                      id="mailaddr"
+                      name="mailaddr"
+                      v-model="form.mailaddr"
+                      :state="getValidationState(validationContext)"
+                      aria-describedby="mailaddr-2-live-feedback"
+                      placeholder="Enter Email Address"
+                    ></b-form-input>
+                    <b-form-invalid-feedback id="mailaddr-2-live-feedback">{{ validationContext.errors[0] }}</b-form-invalid-feedback>
+                  </b-form-group>
+                </validation-provider>
+            
+            
+            <validation-provider
+                  name="subject"
+                  :rules="{ required: true, min: 3 }"
+                  v-slot="validationContext"
+                >
+                  <b-form-group id="subject-input-group-3" label="Subject" label-for="subject-input-3">
+                    <b-form-input
+                      id="subject"
+                      name="subject"
+                      v-model="form.subject"
+                      :state="getValidationState(validationContext)"
+                      aria-describedby="subject-3-live-feedback"
+                      placeholder="Subject"
+                    ></b-form-input>
+                    <b-form-invalid-feedback id="subject-3-live-feedback">{{ validationContext.errors[0] }}</b-form-invalid-feedback>
+                  </b-form-group>
+                </validation-provider>
 
-          <input
-          @change="checkValidation()"
-            type="email"
-            name="mailaddr"
-            placeholder="Your Email Address"
-            id="em"
-            required
-          />
-          <input @change="checkValidation()" type="text" name="subject" placeholder="Subject" required />
-          <textarea
-          @change="checkValidation()"
-            name="message"
-            cols="5"
-            rows="5"
-            placeholder="Message"
-            required
-          ></textarea>
-          <div class="clearfix">
-            <router-link to="/">
-            <button
-              id="cbtn"
-              type="cancel"
-              style="width: 150px"
+
+            <validation-provider
+                  name="message"
+                  :rules="{ required: true, min: 3 }"
+                  v-slot="validationContext"
+                >
+            <b-form-group id="message-input-group-4" label="Message" label-for="message-input-4">
+                    <textarea
+                      id="message"
+                      name="message"
+                      v-model="form.message"
+                      :state="getValidationState(validationContext)"
+                      aria-describedby="message-4-live-feedback"
+                      cols="5"
+                      rows="5"
+                     placeholder="Enter your message here..."
+                  ></textarea>
+                    <b-form-invalid-feedback id="message-4-live-feedback">{{ validationContext.errors[0] }}</b-form-invalid-feedback>
+                  </b-form-group>
+                </validation-provider>
+
+                 <b-button type="submit" variant="primary">Send Message</b-button>
               
-              class="cancelbtn"
-            >
-            Cancel
-              
-            </button>
-            </router-link> 
 
-            <!--- <button
-              id="sendbtn"
-              type="submit"
-              name="sendmsg-button"
-              style="width: 150px"
-              class="contactbtn"
-            >Send Message
-            </button>--->
-            <a data-toggle="modal" type="submit" href="#myModal" v-if="isConfirmAvailable" id="sendbtn" class="contactbtn" style="background-color:green" >Send Message</a>
-              <div class="modal fade" id="myModal">
-                <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="modal-title"><b>Feedback Received</b></h4>
-               <!---<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>---->
-                </div>
-              <div class="modal-body">
-                Your feedback has been recieved and will take 1-2 weeks response.
-              </div>
-              <div class="modal-footer">
-               <!--<a color="green" class="btn btn-primary" @click="$bvModal.hide('modal')">OK </a>-->
-
-
-
-               <!---data-dismiss="modal" is a custom data property for bootstrap-vue that will close the modal-->
-               <!---@click="$router.push({ path: '/' }) means that that button element is binded to a click event and when 
-               it's clicked it will use vue-router to go to that route / which is currently the home page.--->
-               <button data-toggle="modal" color="green" class="btn btn-primary" @click="$router.push({ path: '/' })" data-dismiss="modal" aria-hidden="true" >OK</button>
-               </div>
-               </div>
-               </div>
-             </div>
- 
+               <router-link to="/"> <b-button class="ml-2">Cancel</b-button> </router-link> 
+              </b-form>
+            </validation-observer>
           </div>
-        </form>
       </div>
     </main>
   </div>
 </template>
 
-<script>
-
-export default {
-  data () {
-      return {
-        isConfirmAvailable: false
-      }
-  },
-
-  methods: {
-    checkValidation () {
-      const requiredFields = document.querySelectorAll('[required]')
-
-      for (let i = 0; i < requiredFields.length; i += 1) {
-        let isFieldBlank = (requiredFields[i].value === '')
-
-        if (isFieldBlank) {
-          this.isConfirmAvailable = false
-          break
-        } else {
-          this.isConfirmAvailable = true
-        }
-      }
-    }
-  }
+<style>
+body {
+  padding: 1rem;
+}
+label{
+  padding: 0;
+}
+.form-control.is-valid, .was-validated .form-control:valid {
+  height: 40px;
+}
+.d-block {
+  float: left;
+}
+.btn-primary{
+  width: 100px;
+  height: 40px;
+  float: right;
+  font-size: 15px;
+  background-color: green;
+   border-color: green;
+}
+.btn-primary:hover{
+  background-color: green;
+  border-color: green;
 }
 
+.btn-secondary{
+  width: 100px;
+  height: 40px;
+  float: left;
+  font-size: 15px;
+  background-color: red;
+  border-color: red;
+}
+
+input[type="text"], select {
+  height: 40px;
+  font-size: 12px;
+}
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+textarea{
+  margin-top: 0;
+}
+
+.bv-no-focus-ring{
+  margin-top: 7%;
+}
+</style>
+
+<script>
+export default {
+  data() {
+    return {
+      form: {
+        fullname: null,
+		mailaddr: null,
+		subject: null,
+		message: null
+       
+      }
+    };
+  },
+  methods: {
+    getValidationState({ dirty, validated, valid = null }) {
+      return dirty || validated ? valid : null;
+    },
+    resetForm() {
+      this.form = {
+        fullname: null,
+		mailaddr: null,
+		subject: null,
+		message: null
+        
+      };
+
+      this.$nextTick(() => {
+        this.$refs.observer.reset();
+      });
+    },
+    onSubmit() {
+      alert("Your feedback has been recieved and will take 1-2 weeks response.");
+      
+    }
+  }
+};
 </script>
-
-
-<style>
-    
-      /* Extra styles for the cancel button */
-      #cbtn {
-        padding: 14px 20px;
-        background-color: #f44336;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        float: left;
-        margin-top: 2%;
-      }
-
-      /* Float cancel and signup buttons and add an equal width*/
-      .cancelbtn {
-        float: inline-start;
-        width: 20%;
-      }
-      /*#sendbtn_contact{
-        width: 150px;
-        height: 50px;
-      }*/
-      input[type="submit"] {
-        background-color: #4caf50;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        float: right;
-      }
-
-      input[type="submit"]:hover {
-        background-color: #45a049;
-      }
-      /* Set a style for all buttons */
-    
-
-    input[type="submit"]:hover {
-      background-color: #45a049;
-    }
-    /* Set a style for all buttons */
-    #sendbtn {
-      background-color: #4caf50;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
-      width: 20%;
-      opacity: 0.9;
-      border-radius: 4px;
-      cursor: pointer;
-      float: right;
-      width: 150px;
-    }
-
-    #cbtn:hover,
-    #sendbtn:hover {
-      opacity: 1;
-    }
-  </style>
