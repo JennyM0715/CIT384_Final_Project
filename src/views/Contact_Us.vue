@@ -7,7 +7,7 @@
           <p>Please fill in this form to send your feedback!</p>
           <div>
             <validation-observer ref="observer" v-slot="{ handleSubmit }">
-              <b-form @submit.stop.prevent="handleSubmit(onSubmit)">
+              <b-form  @submit.stop.prevent="handleSubmit(onSubmit)">
                 <validation-provider
                   name="fullname"
                   :rules="{ required: true, min: 3 }"
@@ -78,85 +78,60 @@
                       aria-describedby="message-4-live-feedback"
                       cols="5"
                       rows="5"
-                     placeholder="Enter your message here..."
+                      placeholder="Enter your message here..."
                   ></textarea>
                     <b-form-invalid-feedback id="message-4-live-feedback">{{ validationContext.errors[0] }}</b-form-invalid-feedback>
                   </b-form-group>
                 </validation-provider>
 
-                 <b-button type="submit" variant="primary">Send Message</b-button>
+                 <b-button type="submit" variant="success">Send Message</b-button>
               
 
                <router-link to="/"> <b-button class="ml-2">Cancel</b-button> </router-link> 
               </b-form>
             </validation-observer>
+
+            <div v-if="showModal">
+              <transition name="modal">
+                <div class="modal-mask">
+                  <div class="modal-wrapper">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Success</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" @click="showModal = false">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Your feedback has been recieved and will take 1-2 weeks response.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-success"  @click="$router.push({ path: '/' })">Confirm</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </transition>
+            </div>
           </div>
       </div>
     </main>
   </div>
 </template>
 
-<style>
-body {
-  padding: 1rem;
-}
-label{
-  padding: 0;
-}
-.form-control.is-valid, .was-validated .form-control:valid {
-  height: 40px;
-}
-.d-block {
-  float: left;
-}
-.btn-primary{
-  width: 100px;
-  height: 40px;
-  float: right;
-  font-size: 15px;
-  background-color: green;
-   border-color: green;
-}
-.btn-primary:hover{
-  background-color: green;
-  border-color: green;
-}
-
-.btn-secondary{
-  width: 100px;
-  height: 40px;
-  float: left;
-  font-size: 15px;
-  background-color: red;
-  border-color: red;
-}
-
-input[type="text"], select {
-  height: 40px;
-  font-size: 12px;
-}
-input[type="submit"]:hover {
-  background-color: #45a049;
-}
-textarea{
-  margin-top: 0;
-}
-
-.bv-no-focus-ring{
-  margin-top: 7%;
-}
-</style>
 
 <script>
 export default {
   data() {
     return {
+      showModal: false,
       form: {
         fullname: null,
-		mailaddr: null,
-		subject: null,
-		message: null
-       
+        mailaddr: null,
+        subject: null,
+        message: null
       }
     };
   },
@@ -164,12 +139,13 @@ export default {
     getValidationState({ dirty, validated, valid = null }) {
       return dirty || validated ? valid : null;
     },
+
     resetForm() {
       this.form = {
         fullname: null,
-		mailaddr: null,
-		subject: null,
-		message: null
+        mailaddr: null,
+        subject: null,
+        message: null
         
       };
 
@@ -177,10 +153,10 @@ export default {
         this.$refs.observer.reset();
       });
     },
+  
     onSubmit() {
-      alert("Your feedback has been recieved and will take 1-2 weeks response.");
-      
-    }
+      this.showModal = true
+    },
   }
 };
 </script>

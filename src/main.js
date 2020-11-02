@@ -14,6 +14,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import { ModalPlugin } from 'bootstrap-vue'
 
+
+//VeeValidate is a plugin for Vue.js that
+// allows you to validate input fields and display errors. 
 import {
   ValidationObserver,
   ValidationProvider,
@@ -22,6 +25,7 @@ import {
 } from "vee-validate";
 import en from "vee-validate/dist/locale/en.json";
 import * as rules from "vee-validate/dist/rules";
+
 // Install VeeValidate rules and localization
 Object.keys(rules).forEach(rule => {
   extend(rule, rules[rule]);
@@ -32,6 +36,8 @@ localize("en", en);
 // Install VeeValidate components globally
 Vue.component("ValidationObserver", ValidationObserver);
 Vue.component("ValidationProvider", ValidationProvider);
+
+
 // Install BootstrapVue
 Vue.use(BootstrapVue)
 
@@ -41,17 +47,8 @@ Vue.use(ModalPlugin)
 
 
 
-
-
-
-
-//Alternatively you can import Bootstrap and BootstrapVue scss files in a custom SCSS file:
-//import 'node_modules/bootstrap/scss/bootstrap';
-//import 'node_modules/bootstrap-vue/src/index.scss';
-
-
 //Make sure to import the custom.scss file in your app entry point:
-//import './custom.scss'
+
 import './css/main.css'
 
 Vue.config.productionTip = false

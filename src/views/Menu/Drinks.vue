@@ -626,7 +626,7 @@
                       img-top
                       id="image-card"
                     >
-                      <b-card-body>
+                      <b-card-body id="henderson-trail-pinot-gris-card">
                         <b-card-title id="title"
                           ><b>Henderson Trail Pinot Gris</b></b-card-title
                         >
@@ -635,9 +635,9 @@
                         >
                         <b-card-text
                           >Willamette Valley, Oregon. Aromas of mineral, slate,
-                          white peach, oranges, vanilla & fennel; the palate is
-                          lively & focused w/ green apple, pear, key lime, honey
-                          suckle & ocean breeze.
+                          white peach, oranges, vanilla; the palate is
+                          lively & focused w/ apple, pear, key lime, & honey
+                          suckle.
                         </b-card-text>
                       </b-card-body>
                     </b-card>
@@ -655,12 +655,24 @@
 
 <style scoped>
 #pedroncelli-zinfandel-mother-clone-card{
-  height: 195px;
+  height: 175px;
+}
+#michael-pozzan-merlot-card{
+  height: 175px;
 }
 #monte-antico-rosso-card{
   height: 175px;
 }
+#bogle-vineyard-zinfandel-card{
+  height: 175px;
+}
+#henderson-trail-pinot-gris-card{
+  height: 175px;
+}
 #pine-ridge-chenin-blanc-viognier-card{
+  height: 220px;
+}
+#kendall-jackson-chardonnay-vintners-reserve-card, #cantina-di-casteggio-moscato-card{
   height: 220px;
 }
 #soda-card{
