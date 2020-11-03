@@ -37,19 +37,52 @@ The Contact Us and Sign Up page will have a window pop up when the user clicks o
    OR
 10) npm install vue bootstrap-vue bootstrap
 11) npm i bootstrap jquery popper.js
+(VeeValidate is a plugin for Vue.js that allows you to validate input fields and display errors. )
+11. npm install vee-validate   
 
-11. code . (opens Visual Studio Code)
-12. npm run serve
+12. code .   (opens Visual Studio Code)
 
-**\***in VS CODE :
+***in VS CODE : 
 
 13. look for extension Remote-WSL and install it
 14. Look for Vetur and install it
 
-/_Go to main.js file and enter these code _/
 
-15. import 'bootstrap';
-16. import 'bootstrap/dist/css/bootstrap.min.css';
-17. import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-18. Vue.use(BootstrapVue)
-19. Vue.use(IconsPlugin)
+****on ubuntu terminal
+
+15. npm run serve
+
+****in main.js for bootstrapVue and VeeValidate (in VS Code):
+
+import 'bootstrap'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+// Install BootstrapVue
+Vue.use(BootstrapVue)
+
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
+
+
+//VeeValidate plugin
+import {
+  ValidationObserver,
+  ValidationProvider,
+  extend,
+  localize
+} from "vee-validate";
+import en from "vee-validate/dist/locale/en.json";
+import * as rules from "vee-validate/dist/rules";
+
+// Install VeeValidate rules and localization
+Object.keys(rules).forEach(rule => {
+  extend(rule, rules[rule]);
+});
+
+localize("en", en);
+
+// Install VeeValidate components globally
+Vue.component("ValidationObserver", ValidationObserver);
+Vue.component("ValidationProvider", ValidationProvider);
