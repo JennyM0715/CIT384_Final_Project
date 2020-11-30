@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
+
+//the paths here is what is used to for router-link in APP.VUE
 const routes = [
   {
     path: '/',

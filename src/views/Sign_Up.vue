@@ -1,13 +1,18 @@
 <template>
   <div class="sign_up">
       <!----<h1>This is an contact us page</h1>--->
+      <!--START OF MAIN--->
       <main role="main">
         <div class="SignUp_container">
           <h1>Sign Up With Us!</h1>
         <p>Please fill in this form to recieve promotional offers, discounts, notices on special events, and so much more!</p>
           <div>
+
+          <!---START OF THE SIGN UP FORM USING VEEVALIDATE-->
             <validation-observer ref="observer" v-slot="{ handleSubmit }">
               <b-form  @submit.stop.prevent="handleSubmit(onSubmit)">
+
+              <!----START OF FIRST NAME INPUT FIELD---->
                 <validation-provider
                   name="first name"
                   :rules="{ required: true, min: 3 }"
@@ -25,7 +30,9 @@
                     <b-form-invalid-feedback id="first_name-1-live-feedback">{{ validationContext.errors[0] }}</b-form-invalid-feedback>
                   </b-form-group>
                 </validation-provider>
-            
+            <!----END OF FIRST NAME INPUT FIELD---->
+
+            <!----START OF LAST NAME INPUT FIELD---->
             <validation-provider
                   name="last name"
                   :rules="{ required: true, min: 3 }"
@@ -43,8 +50,9 @@
                     <b-form-invalid-feedback id="lname-2-live-feedback">{{ validationContext.errors[0] }}</b-form-invalid-feedback>
                   </b-form-group>
                 </validation-provider>
+            <!----END OF LAST NAME INPUT FIELD---->
             
-            
+            <!----START OF EMAIL ADDRESS INPUT FIELD---->
             <validation-provider
                   name="email address"
                   :rules="{ required: true, min: 3 }"
@@ -62,16 +70,20 @@
                     <b-form-invalid-feedback id="Email Address-3-live-feedback">{{ validationContext.errors[0] }}</b-form-invalid-feedback>
                   </b-form-group>
                 </validation-provider>
+                <!----END OF EMAIL ADDRESS INPUT FIELD---->
 
-
-
+              <!----THE GREEN SIGN UP BUTTON---->
                  <b-button type="submit" variant="success">Sign Up</b-button>
               
-
+                <!----THE RED CANCEL BUTTON---->
+                <!--redirects user to home page (Home.vue)-->
                <router-link to="/"> <b-button class="ml-2">Cancel</b-button> </router-link> 
               </b-form>
             </validation-observer>
+            <!---END OF THE SIGN UP FORM USING VEEVALIDATE-->
 
+
+          <!----START OF MODAL WINDOW AFTER USER HAS FILLED OUT ALL FIELDS AND CLICKED SIGN UP-->
             <div v-if="showModal">
               <transition name="modal">
                 <div class="modal-mask">
@@ -84,10 +96,15 @@
                             <span aria-hidden="true" @click="showModal = false">&times;</span>
                           </button>
                         </div>
+
+                        <!---DISPLAY MESSAGE IN THE WINDOW MODAL--->
                         <div class="modal-body">
                           <p>Thank you for signing up! Please check email for our special offers!</p>
                         </div>
+
+                        <!---THE "CONFIRM" BUTTON IN MODAL WINDOW TO REDIRECT USER TO HOME PAGE (HOME.VUE)------>
                         <div class="modal-footer">
+                          <!---$router.push redirects user to home.vue-->
                           <button type="button" class="btn btn-success"  @click="$router.push({ path: '/' })">Confirm</button>
                         </div>
                       </div>
@@ -96,14 +113,27 @@
                 </div>
               </transition>
             </div>
+            <!------END OF MODAL WINDOW------->
           </div>
       </div>
+      <!-----END OF SignUp_container----->
     </main>
+    <!--START OF MAIN--->
   </div>
+  <!-----END OF sign_up-------->
 </template>
 
 
 <script>
+
+//WON'T DISPLAY MODAL WINDOW IF ALL INPUT FIELDS ARE EMPTY
+//DISPLAY MODAL WINDOW ONLY WHEN ALL FIELDS ARE FILLED
+
+//BEFORE MODAL WINDOW WOULD DISPLAY EVEN WHEN ALL INPUT FIELDS WERE EMPTY 
+// OR PARTIAL OF THE FORM FILLED
+
+
+//MODAL WINDOW SOMEHOW OVERRIDE THE VALIDATTION 
 export default {
   data() {
     return {

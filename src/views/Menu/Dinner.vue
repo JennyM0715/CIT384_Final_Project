@@ -1,10 +1,16 @@
 <template>
+
+<!---START OF MAIN--->
   <main role="main">
   <div class="dinner">
     <!---<h1>This is an dinner page</h1>---->
+
+    <!--START OF DINNER COLUMN---->
     <div>
     <b-card no-body>
      <b-tabs pills card horizontal id="pills-card-tab">
+     
+<!------------START OF  DINNER TAB------------------------------------------------>
       <b-tab title="Dinner" active>
           <b-card-text> *All dinner dishes are served with rice, 
               beans, and tortillas--choice of corn or flour.
@@ -127,4 +133,5 @@
   <!------------END OF LUNCH TAB------------------------------------------------>
   </div>
   </main>
+   <!---END OF MAIN--->
 </template>

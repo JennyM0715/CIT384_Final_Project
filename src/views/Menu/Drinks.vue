@@ -1,11 +1,17 @@
 <template>
+
+<!--START OF MAIN--->
   <main role="main">
     <div class="drinks">
       <!----<h1>This is an drinks page</h1>--->
-      <!----------row 1 : Non-alcholic drinks--------------->
+
+      <!--START OF DRINKS COLUMN---->
       <div>
         <b-card no-body>
           <b-tabs pills card horizontal id="pills-card-tab">
+
+<!------------START OF NON ALCOHOLIC DRINKS TAB------------------------------------------------>
+<!----------row 1 : Non-alcholic drinks--------------->
             <b-tab title="Non-alcoholic Beverages" active id="non-al-drinks">
               <section role="region">
                 <div class="mt-3">
@@ -133,8 +139,9 @@
                 </div>
               </section>
             </b-tab>
-            <!------------END OF NON ALCOHOLIC DRINKS TAB------------------------------------------------>
+ <!------------END OF NON ALCOHOLIC DRINKS TAB------------------------------------------------>
 
+<!------------START OF BEERS  TAB------------------------------------------------>
             <!----------row 1 : Beer drinks--------------->
             <b-tab title="Beer">
               <section role="region">
@@ -313,8 +320,9 @@
                 </div>
               </section>
             </b-tab>
-            <!------------END OF BEERS  TAB------------------------------------------------>
+<!------------END OF BEERS  TAB------------------------------------------------>
 
+<!------------START OF RED WINE  TAB------------------------------------------------>
             <!----------row 1 : Red Wine drinks--------------->
             <b-tab title="Red Wine">
               <b-card-text
@@ -477,8 +485,9 @@
                 </div>
               </section>
             </b-tab>
-            <!------------END OF RED WINE TAB------------------------------------------------>
+ <!------------END OF RED WINE TAB------------------------------------------------>
 
+<!------------START OF WHITE WINE  TAB------------------------------------------------>
             <!----------row 1 : White Wine drinks--------------->
             <b-tab title="White Wine">
               <b-card-text
@@ -645,14 +654,18 @@
                 </div>
               </section>
             </b-tab>
-            <!------------END OF WHITE WINE TAB------------------------------------------------>
+<!------------END OF WHITE WINE TAB------------------------------------------------>
           </b-tabs>
         </b-card>
       </div>
     </div>
   </main>
+  <!---END OF MAIN--->
 </template>
 
+
+
+<!---CSS EDITS FOR THIS VUE FILE ONLY--->
 <style scoped>
 #pedroncelli-zinfandel-mother-clone-card{
   height: 175px;

@@ -2,9 +2,13 @@
   <main role="main">
   <div class="breakfast">
     <!-----<h1>This is an about page</h1>----->
+
+ <!----START OF BREAKFAST COLUMN---->
     <div>
     <b-card no-body>
      <b-tabs pills card horizontal id="pills-card-tab">
+
+<!-----------------------------START OF BREAKFAST TAB---------------->
       <b-tab title="Breakfast" active>
           <b-card-text> *All breakfast dishes are served with rice, 
               beans, and tortillas--choice of corn or flour.
@@ -126,4 +130,5 @@
 <!------------END OF BREAKFAST TAB------------------------------------------------>
   </div>
   </main>
+  <!---END OF MAIN ---->
 </template>

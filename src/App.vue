@@ -4,6 +4,12 @@
     <!---all pages (.vue) will have navigation bar and footer------->
     <!----MUST WRAP IT AROUND <ROUTER LINK> tag in order for 
       it to redirect you to a different 'page'-->
+
+      <!--<router-link> is the component for enabling user 
+         navigation in a router-enabled app. -->
+
+         <!---see index.js in router folder --->
+         <!--router-link "to" attribute is where you enter the path for the vue files--->
       <div class="navbar-menu" id="nav" role="navigation">
       <b-navbar toggleable="lg" type="dark" variant="dark">
        <b-navbar-brand href="#">Mexicanology</b-navbar-brand>
@@ -21,17 +27,6 @@
         </b-navbar>
         </div>
     <!------END OF NAVIGATION with the use of router-link tags ----------->
-     <!---- <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/contact_us">Contact Us</router-link> |
-      <router-link to="/sign_up">Sign Up</router-link> |
-      <router-link to="/Menu/appetizers">Appetizers</router-link> |
-      <router-link to="/Menu/breakfast">Breakfast</router-link> |
-      <router-link to="/Menu/lunch">Lunch</router-link> |
-      <router-link to="/Menu/dinner">Dinner</router-link> |
-      <router-link to="/Menu/dessert">Dessert</router-link> |
-      <router-link to="/Menu/drinks">Drinks</router-link>---->
-    <!----END OF THE <div id="nav">--------->
     <router-view/>
 
     <!---START OF FOOTER-->

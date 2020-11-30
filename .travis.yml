@@ -23,8 +23,18 @@ after_success:
   - mv CIT384_Final_Project-PUBLIC/.git dist/
   - cd dist
   - git remote rm origin
-  #- git remote add origin https://github.com/JennyM0715/CIT384_Final_Project-PUBLIC
+  #WRONG git command{IGNORE this line}- git remote add origin https://github.com/JennyM0715/CIT384_Final_Project-PUBLIC
+  
+  #get the github token in my github acct uder settings and set ut the GH_TOKEN 
+  #   variable in my Travis CI account  (website: https://travis-ci.org/)
+
+  #Travis CI is a hosted continuous integration service used to build and test software
+  #     projects hosted at GitHub. Makes it easier to update both the source code repository
+  #     and the PUBLIC repository (to host restaurant website only) in my github acct
   - git remote add origin https://username:${GH_TOKEN}@github.com/JennyM0715/CIT384_Final_Project-PUBLIC
   - git add .
   - git commit -m "Completed Travis-CI automated build"
+
+  #create the GIT_BRANCH in TravisCI under settings---choose main branch since that is 
+  #  the branch chosen for both source code repo and PUBLIC repo in my Guthub acct
   - git push -fq origin ${GIT_BRANCH}

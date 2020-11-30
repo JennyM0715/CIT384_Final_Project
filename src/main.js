@@ -17,6 +17,8 @@ import { ModalPlugin } from 'bootstrap-vue'
 
 //VeeValidate is a plugin for Vue.js that
 // allows you to validate input fields and display errors. 
+
+//this is used for CONTACT.VUE and SIGNUP.VUE
 import {
   ValidationObserver,
   ValidationProvider,
@@ -48,7 +50,8 @@ Vue.use(ModalPlugin)
 
 
 //Make sure to import the custom.scss file in your app entry point:
-
+//this holds majority of CSS edits for the .vue files but there are still some
+//   CSS edits in indiviual .vue files
 import './css/main.css'
 
 Vue.config.productionTip = false

@@ -1,9 +1,15 @@
 <template>
+
+<!---START OF MAIN---->
   <main role="main">
   <div class="dessert">
+
+  <!---START OF DESSERT COLUMN--->
     <div>
     <b-card no-body>
       <b-tabs pills card horizontal id="pills-card-tab">
+      
+<!------------START OF  DESSERT TAB------------------------------------------------>
          <b-tab title="Dessert" active id="dessert">
     <!----------row 1--------------->
     <section role="region">
@@ -128,10 +134,11 @@
     </b-tabs>
     </b-card>
     </div>
-    
+<!---END OF DESSERT COLUMN---------------->
 
 
   </div>
   </main>
+  <!--END OF MAIN--->
 </template>
 

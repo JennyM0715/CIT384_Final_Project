@@ -2,12 +2,13 @@
   <main role="main">
   <div class="appetizers">
     <!----<h1>This is an about page</h1>--->
-    <!----------row 1 : APPETIZERS--------------->
+    <!----------START OF APPETIZERS COLUMN--------------->
     <div>
     <b-card no-body>
      <b-tabs pills card horizontal id="pills-card-tab">
+     <!---START OF APPETIZERS TAB---->
       <b-tab title="Appetizers" active>
-
+      <!----------row 1 : APPETIZERS--------------->
       <section role="region">
       <div class="mt-3">
       <b-card-group deck>
@@ -176,6 +177,8 @@
 
 <!---------------END OF THE SALADS TAB------------------------------------->
 
+
+
 <!---------------SOUPS TAB----------------------------------------->
      <b-tab title="Soups">
       <section role="region">
@@ -292,5 +295,7 @@
     </b-card>
   </div>
   </div>
+  <!-----END OF APPETIZERS MENU-------->
   </main>
+  <!--END OF MAIN---->
 </template>

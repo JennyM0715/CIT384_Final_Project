@@ -1,13 +1,19 @@
 <template>
   <div class="contact_us">
       <!----<h1>This is an contact us page</h1>--->
+
+      <!--START OF MAIN--->
       <main role="main">
         <div class="Contact_container">
           <h1>Contact Us!</h1>
           <p>Please fill in this form to send your feedback!</p>
           <div>
+
+           <!---START OF THE CONTACT US FORM USING VEEVALIDATE-->
             <validation-observer ref="observer" v-slot="{ handleSubmit }">
               <b-form  @submit.stop.prevent="handleSubmit(onSubmit)">
+
+              <!---START OF FULL NAME INPUT FIELD--->
                 <validation-provider
                   name="fullname"
                   :rules="{ required: true, min: 3 }"
@@ -25,7 +31,9 @@
                     <b-form-invalid-feedback id="fullname-1-live-feedback">{{ validationContext.errors[0] }}</b-form-invalid-feedback>
                   </b-form-group>
                 </validation-provider>
-            
+            <!---END OF FULL NAME INPUT FIELD--->
+
+            <!---START OF EMAIL ADDRESS INPUT FIELD--->
             <validation-provider
                   name="mailaddr"
                   :rules="{ required: true, min: 3 }"
@@ -43,8 +51,10 @@
                     <b-form-invalid-feedback id="mailaddr-2-live-feedback">{{ validationContext.errors[0] }}</b-form-invalid-feedback>
                   </b-form-group>
                 </validation-provider>
+             <!---END OF EMAIL ADDRESS INPUT FIELD--->
             
-            
+
+             <!---START OF SUBJECT  INPUT FIELD--->
             <validation-provider
                   name="subject"
                   :rules="{ required: true, min: 3 }"
@@ -62,8 +72,10 @@
                     <b-form-invalid-feedback id="subject-3-live-feedback">{{ validationContext.errors[0] }}</b-form-invalid-feedback>
                   </b-form-group>
                 </validation-provider>
+          <!---END OF SUBJECT  INPUT FIELD--->
 
 
+        <!---START OF MESSAGE  INPUT FIELD--->
             <validation-provider
                   name="message"
                   :rules="{ required: true, min: 3 }"
@@ -83,14 +95,20 @@
                     <b-form-invalid-feedback id="message-4-live-feedback">{{ validationContext.errors[0] }}</b-form-invalid-feedback>
                   </b-form-group>
                 </validation-provider>
+            <!---END OF MESSAGE  INPUT FIELD--->
 
+             <!----THE GREEN SIGN UP BUTTON---->
                  <b-button type="submit" variant="success">Send Message</b-button>
               
-
+              <!----THE RED CANCEL BUTTON---->
+                <!--redirects user to home page (Home.vue)-->
                <router-link to="/"> <b-button class="ml-2">Cancel</b-button> </router-link> 
               </b-form>
             </validation-observer>
+            <!---END OF THE CONTACT US FORM USING VEEVALIDATE-->
 
+
+             <!----START OF MODAL WINDOW AFTER USER HAS FILLED OUT ALL FIELDS AND CLICKED "SEND MESSAGE"-->
             <div v-if="showModal">
               <transition name="modal">
                 <div class="modal-mask">
@@ -103,10 +121,14 @@
                             <span aria-hidden="true" @click="showModal = false">&times;</span>
                           </button>
                         </div>
+
+                         <!---DISPLAY MESSAGE IN THE WINDOW MODAL--->
                         <div class="modal-body">
                           <p>Your feedback has been recieved and will take 1-2 weeks response.</p>
                         </div>
+                        <!---THE "CONFIRM" BUTTON IN MODAL WINDOW TO REDIRECT USER TO HOME PAGE (HOME.VUE)------>
                         <div class="modal-footer">
+                         <!---$router.push redirects user to home.vue-->
                           <button type="button" class="btn btn-success"  @click="$router.push({ path: '/' })">Confirm</button>
                         </div>
                       </div>
@@ -115,14 +137,28 @@
                 </div>
               </transition>
             </div>
+            <!---END OF THE MODAL WINDOW-->
           </div>
       </div>
+      <!--END OF Contact_container class--->
     </main>
+    <!--START OF MAIN--->
   </div>
+  <!----END OF contact_us class--->
 </template>
 
 
 <script>
+
+//WON'T DISPLAY MODAL WINDOW IF ALL INPUT FIELDS ARE EMPTY
+//DISPLAY MODAL WINDOW ONLY WHEN ALL FIELDS ARE FILLED
+
+//BEFORE MODAL WINDOW WOULD DISPLAY EVEN WHEN ALL INPUT FIELDS WERE EMPTY 
+// OR PARTIAL OF THE FORM FILLED
+
+
+//MODAL WINDOW SOMEHOW OVERRIDE THE VALIDATTION 
+//same javascript code from Sign_Up.vue file since same validation is used for contact form too
 export default {
   data() {
     return {

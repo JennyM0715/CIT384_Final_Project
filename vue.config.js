@@ -22,6 +22,7 @@ module.exports = {
         })
     },
    // publicPath: '/CIT384_Final_Project-PUBLIC/'
+   //set the path for the PUBLIC repository in github
    publicPath: process.env.NODE_ENV === 'production'
       ? '/CIT384_Final_Project-PUBLIC/'
       : '/'

@@ -1,7 +1,8 @@
 <template>
   <main role="main">
   <div class="home">
-    
+
+        <!---START OF SECTION--->
         <section role="region" title="Who are we?">
         <div class="Summary_transbox">
             <h1>Who are we?</h1>
@@ -25,7 +26,9 @@
             </ol>
             </div>
           </section>
+          <!---END OF SECTION--->
        
+       <!---START OF SECTION--->
         <!----end of About us (transparent box)-->
          <!-----Hours of Operation content----------->
       <section role="region" title="Hours of Operation">
@@ -46,6 +49,7 @@
         </div>
       </div>
       </section>
+      <!---END OF SECTION--->
       <!-----End of Hours of Operation content----------->
      
   </div>
