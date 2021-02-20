@@ -197,7 +197,7 @@ export default {
         // Can use either SecureToken, or plain text email credentials.
         // Plain text option is shown below but commented out
         Email.send({
-          SecureToken : "c39d5ed5-9b2a-440b-bc40-2ca7ee646ea5",
+          SecureToken : "6501ce88-fdae-4e45-8496-03e69af6d15f",
           // Host : "smtp.gmail.com",
           // Username : 'cit384.final@gmail.com',
           // Password : '',
