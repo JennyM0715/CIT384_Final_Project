@@ -74,7 +74,7 @@
 
                 <!---Vue-recaptcha code including site key provided by reCAPTCHA API--->
                 <div style="margin-left: 30px">
-                  <vue-recaptcha sitekey="6LcB3l8aAAAAAG5vB32bLKXe5FsMrNvjpqVevvan" 
+                  <vue-recaptcha sitekey="6Lfl5V8aAAAAAHa19YVP8oAxlbEtgUKdIsJooy_P" 
                   @verify="enableSubmit" style="padding-top: 10px; padding-bottom: 10px;"></vue-recaptcha>
                 </div>
 
