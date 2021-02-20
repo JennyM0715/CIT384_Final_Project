@@ -72,6 +72,12 @@
                 </validation-provider>
                 <!----END OF EMAIL ADDRESS INPUT FIELD---->
 
+                <!---Vue-recaptcha code including site key provided by reCAPTCHA API--->
+                <div style="margin-left: 30px">
+                  <vue-recaptcha sitekey="6LeCzF8aAAAAAHbtF4hUJSVUjK-hE8UVbfVrlwH0" 
+                  @verify="enableSubmit" style="padding-top: 10px; padding-bottom: 10px;"></vue-recaptcha>
+                </div>
+
               <!----THE GREEN SIGN UP BUTTON---->
                  <b-button type="submit" variant="success">Sign Up</b-button>
               
@@ -125,7 +131,7 @@
 
 
 <script>
-
+import VueRecaptcha from 'vue-recaptcha';
 //WON'T DISPLAY MODAL WINDOW IF ALL INPUT FIELDS ARE EMPTY
 //DISPLAY MODAL WINDOW ONLY WHEN ALL FIELDS ARE FILLED
 
@@ -140,7 +146,7 @@ export default {
       showModal: false,
       form: {
         fname: null,
-		lname: null,
+		    lname: null,
         mailaddr: null
         
       }
@@ -154,7 +160,7 @@ export default {
     resetForm() {
       this.form = {
          fname: null,
-		lname: null,
+		    lname: null,
         mailaddr: null
         
       };
@@ -164,9 +170,73 @@ export default {
       });
     },
   
-    onSubmit() {
-      this.showModal = true
+    //onSubmit() {
+    //  this.showModal = true
+   // },
+    // Can only be called upon validation of form via VeeValidate
+    // Requires completion of reCAPTCHA to call sendEmail function
+    submitForm (){
+      if (this.form.disabled == false){
+       this.sendEmail();
+      }
     },
+    // function called upon verification of reCAPTCHA, 
+    enableSubmit(){
+       console.log("Verified, submit button enabled");
+        this.form.disabled = false;
+    },
+        sendEmail() {
+        var fnameValue = document.getElementById("fname").value;
+        var lnameValue = document.getElementById("lname").value;
+        var emailValue = document.getElementById("mailaddr").value;
+        var bodyValue = "<h1>Welcome, ";
+        bodyValue += fnameValue;
+        bodyValue += ".</h1><p>Thank you for signing up! <br>";
+        bodyValue += "You will receive alerts for the latest promotional offers, special discounts and events, and more!</p>"
+        //Email.send function provided by smtp.js
+        // Can use either SecureToken, or plain text email credentials.
+        // Plain text option is shown below but commented out
+        Email.send({
+          SecureToken : "7c6b77cb-8ce0-4c1b-bd02-5d37dae8493b",
+          // Host : "smtp.gmail.com",
+          // Username : 'cit384.final@gmail.com',
+          // Password : '',
+          To : emailValue,
+          From : "cit384.final.mexicanology@gmail.com",
+          Subject : "Promo Confirmation from Mexicanology",
+          Body : bodyValue
+          }).then((message) => {
+          console.log('Message status: ', message);
+          if (message == 'OK'){
+            this.doNotification();}
+          })
+          this.resetForm();
+          // Resets reCAPTCHA
+          grecaptcha.reset();
+    },
+    // Toast notification function, this is triggered in promise of Email.send function
+    doNotification() {
+        this.$toast.success("Thank you for subscribing. Check your email!", {
+          position: "bottom-right",
+          timeout: 5000,
+          closeOnClick: true,
+          pauseOnFocusLoss: true,
+          pauseOnHover: true,
+          draggable: true,
+          draggablePercent: 0.6,
+          showCloseButtonOnHover: false,
+          hideProgressBar: true,
+          closeButton: "button",
+          icon: true,
+          rtl: false
+        });
+        // Redirects user back to Home page
+        this.$router.push({ path: '/' });
+    }
+     
+  },
+  components: {
+    'vue-recaptcha': VueRecaptcha
+  },
   }
-};
 </script>
