@@ -1,6 +1,8 @@
 <template>
   <div id="app">
    
+
+   <!--testing stuff--->
     <!---all pages (.vue) will have navigation bar and footer------->
     <!----MUST WRAP IT AROUND <ROUTER LINK> tag in order for 
       it to redirect you to a different 'page'-->
