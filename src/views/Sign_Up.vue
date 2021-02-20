@@ -148,7 +148,6 @@ export default {
         fname: null,
 		    lname: null,
         mailaddr: null
-        
       }
     };
   },
