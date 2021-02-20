@@ -11,7 +11,7 @@
 
            <!---START OF THE CONTACT US FORM USING VEEVALIDATE-->
             <validation-observer ref="observer" v-slot="{ handleSubmit }">
-              <b-form  @submit.stop.prevent="handleSubmit(onSubmit)">
+              <b-form  @submit.stop.prevent="handleSubmit(submitForm)">
 
               <!---START OF FULL NAME INPUT FIELD--->
                 <validation-provider
@@ -114,7 +114,7 @@
 
 
              <!----START OF MODAL WINDOW AFTER USER HAS FILLED OUT ALL FIELDS AND CLICKED "SEND MESSAGE"-->
-            <div v-if="showModal">
+           <!-- <div v-if="showModal">
               <transition name="modal">
                 <div class="modal-mask">
                   <div class="modal-wrapper">
@@ -125,23 +125,23 @@
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true" @click="showModal = false">&times;</span>
                           </button>
-                        </div>
+                        </div>--->
 
                          <!---DISPLAY MESSAGE IN THE WINDOW MODAL--->
-                        <div class="modal-body">
+                       <!-- <div class="modal-body">
                           <p>Your feedback has been recieved and will take 1-2 weeks response.</p>
-                        </div>
+                        </div>--->
                         <!---THE "CONFIRM" BUTTON IN MODAL WINDOW TO REDIRECT USER TO HOME PAGE (HOME.VUE)------>
-                        <div class="modal-footer">
+                        <!--<div class="modal-footer">-->
                          <!---$router.push redirects user to home.vue-->
-                          <button type="button" class="btn btn-success"  @click="$router.push({ path: '/' })">Confirm</button>
+                       <!--   <button type="button" class="btn btn-success"  @click="$router.push({ path: '/' })">Confirm</button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </transition>
-            </div>
+            </div>--->
             <!---END OF THE MODAL WINDOW-->
           </div>
       </div>
