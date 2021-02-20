@@ -47,7 +47,14 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.use(ModalPlugin)
 
-
+//Toast notifications
+import Toast from "vue-toastification";
+import "vue-toastification/dist/index.css";
+Vue.use(Toast, {
+  transition: "Vue-Toastification__bounce",
+  maxToasts: 20,
+  newestOnTop: true
+});
 
 //Make sure to import the custom.scss file in your app entry point:
 //this holds majority of CSS edits for the .vue files but there are still some
