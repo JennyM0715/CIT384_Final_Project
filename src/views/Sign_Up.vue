@@ -74,7 +74,7 @@
 
                 <!---Vue-recaptcha code including site key provided by reCAPTCHA API--->
                 <div style="margin-left: 30px">
-                  <vue-recaptcha sitekey="6LeCzF8aAAAAAHbtF4hUJSVUjK-hE8UVbfVrlwH0" 
+                  <vue-recaptcha sitekey="6LcB3l8aAAAAAG5vB32bLKXe5FsMrNvjpqVevvan)" 
                   @verify="enableSubmit" style="padding-top: 10px; padding-bottom: 10px;"></vue-recaptcha>
                 </div>
 
@@ -197,7 +197,7 @@ export default {
         // Can use either SecureToken, or plain text email credentials.
         // Plain text option is shown below but commented out
         Email.send({
-          SecureToken : "7c6b77cb-8ce0-4c1b-bd02-5d37dae8493b",
+          SecureToken : "e3f3fcff-efa9-4885-8b1c-173249cc8296",
           // Host : "smtp.gmail.com",
           // Username : 'cit384.final@gmail.com',
           // Password : '',
