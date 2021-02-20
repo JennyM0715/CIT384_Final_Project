@@ -40,7 +40,7 @@
                 >
                   <b-form-group id="lname-input-group-2" label="Last Name" label-for="lname-input-2">
                     <b-form-input
-                      id="lname "
+                      id="lname"
                       name="last name"
                       v-model="form.lname"
                       :state="getValidationState(validationContext)"
